@@ -9,7 +9,7 @@
 //  }
 // Runners:
 //
-//   cmd/echo/main.go binary_file var_name # to output your []byte to stdout
+//   cmd/bin2go/main.go binary_file var_name # to output your []byte to stdout
 //
 package bin2go
 
