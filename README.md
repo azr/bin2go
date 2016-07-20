@@ -15,7 +15,7 @@ Embed binary files into your executables.
 
 Runners:
 
-    cmd/echo/main.go binary_file var_name to output your []byte to stdout
+    cmd/echo/main.go binary_file var_name # to output your []byte to stdout
 
 ## Usage
 
