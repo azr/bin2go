@@ -15,6 +15,8 @@ Embed binary files into your executables.
 
 Runners:
 
+    go get github.com/azr/bin2go/...
+
     cmd/bin2go/main.go binary_file var_name # to output your []byte to stdout
 
 ## Usage
