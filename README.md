@@ -1,4 +1,4 @@
-# bin2go
+# bin2go [![Build Status](https://travis-ci.org/azr/bin2go.svg?branch=master)](https://travis-ci.org/azr/bin2go)
 --
     import "github.com/azr/bin2go"
 
