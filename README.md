@@ -10,14 +10,14 @@ Embed binary files into your executables.
     	 b := bytes.NewBuffer([]byte{1})
     	 EchoByteSlice("echo", b, os.Stdout)
     	 // Output:
-    	 // var echo = []byte{1}
+    	 // const echo = []byte{1}
      }
 
 Runners:
 
     go get github.com/azr/bin2go/...
 
-    cmd/bin2go/main.go binary_file var_name # to output your []byte to stdout
+    cmd/bin2go/main.go binary_file name # to output your []byte to stdout
 
 ## Usage
 
