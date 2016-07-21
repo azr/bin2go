@@ -23,8 +23,9 @@ import (
 
 //EchoByteSlice reads byte by byte from *in* and creates a golang byte array named *name*.
 //It writes byte by byte to *out*.
-func EchoByteSlice(name string, in io.Reader, out io.Writer) (err error) {
-	_, err = fmt.Fprintf(out, `const %s = []byte{`, name)
+//if vPerline != 0, add a new line every vPerline value
+func EchoByteSlice(name string, vPerline int, in io.Reader, out io.Writer) (err error) {
+	_, err = fmt.Fprintf(out, "const %s = []byte{", name)
 	if err != nil {
 		return err
 	}
@@ -40,7 +41,11 @@ func EchoByteSlice(name string, in io.Reader, out io.Writer) (err error) {
 			break
 		}
 		if n > 0 {
-			_, err = fmt.Fprintf(out, `, `)
+			if vPerline > 0 && n%vPerline == 0 {
+				_, err = fmt.Fprintf(out, ",\n")
+			} else {
+				_, err = fmt.Fprintf(out, `, `)
+			}
 			if err != nil {
 				return err
 			}

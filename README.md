@@ -24,7 +24,8 @@ Runners:
 #### func  EchoByteSlice
 
 ```go
-func EchoByteSlice(name string, in io.Reader, out io.Writer) (err error)
+func EchoByteSlice(name string, vPerline int, in io.Reader, out io.Writer) (err error)
 ```
 EchoByteSlice reads byte by byte from *in* and creates a golang byte array named
-*name*. It writes byte by byte to *out*.
+*name*. It writes byte by byte to *out*. if vPerline != 0, add a new line every
+vPerline value
