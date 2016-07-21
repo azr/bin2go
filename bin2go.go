@@ -5,12 +5,12 @@
 //	 b := bytes.NewBuffer([]byte{1})
 //	 EchoByteSlice("echo", b, os.Stdout)
 //	 // Output:
-// 	 // const echo = []byte{1}
+// 	 // var echo = []byte{1}
 //  }
 // Runners:
 //   go get github.com/azr/bin2go/...
 //
-//   cmd/bin2go/main.go binary_file name # to output your []byte to stdout
+//   cmd/bin2go/main.go binary_file var_name # to output your []byte to stdout
 //
 package bin2go
 
@@ -25,7 +25,7 @@ import (
 //It writes byte by byte to *out*.
 //if vPerline != 0, add a new line every vPerline value
 func EchoByteSlice(name string, vPerline int, in io.Reader, out io.Writer) (err error) {
-	_, err = fmt.Fprintf(out, "const %s = []byte{", name)
+	_, err = fmt.Fprintf(out, `var %s = []byte{`, name)
 	if err != nil {
 		return err
 	}
