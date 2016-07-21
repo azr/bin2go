@@ -38,5 +38,5 @@ func ExampleEchoBytes_phrase() {
 	EchoByteSlice("echo", 5, b, os.Stdout)
 	// Output:
 	// var echo = []byte{31, 139, 8, 0, 0,
-	// 9, 110, 136}
+	// 	9, 110, 136}
 }

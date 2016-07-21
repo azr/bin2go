@@ -42,7 +42,7 @@ func EchoByteSlice(name string, vPerline int, in io.Reader, out io.Writer) (err 
 		}
 		if n > 0 {
 			if vPerline > 0 && n%vPerline == 0 {
-				_, err = fmt.Fprintf(out, ",\n")
+				_, err = fmt.Fprintf(out, ",\n\t")
 			} else {
 				_, err = fmt.Fprintf(out, `, `)
 			}
