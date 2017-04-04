@@ -2,22 +2,15 @@
 --
     import "github.com/azr/bin2go"
 
-Package bin2go transforms a binary stream to a golang byte array.
+Package bin2go transforms a file or a binary stream to a golang byte array.
 
 Embed binary files into your executables.
-
-     func ExampleEchoBytes_empty() {
-    	 b := bytes.NewBuffer([]byte{1})
-    	 EchoByteSlice("echo", b, os.Stdout)
-    	 // Output:
-    	 // var echo = []byte{1}
-     }
 
 Runners:
 
     go get github.com/azr/bin2go/...
 
-    cmd/bin2go/main.go binary_file var_name # to output your []byte to stdout
+    bin2go binary_file var_name # to output your []byte to stdout
 
 ## Usage
 
